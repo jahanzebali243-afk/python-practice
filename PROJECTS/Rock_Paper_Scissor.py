@@ -24,10 +24,11 @@ def game():
 def game_2():
     while True:
         game()
-        ask = input ("Want to play next round ? \n Yes or No : ").strip().lower()
+        ask = input ("Want to play next round ? \n Yes or No :  ").strip
+        ().lower()
         if ask in ["y" , "yes"]:
           print ("Next Round Begin!!")            
-        else :
+        else : 
             print("Thanks For Playing")
             break
 
