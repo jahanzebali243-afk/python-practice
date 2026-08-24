@@ -1,6 +1,6 @@
 
-s=()
-print(type(s))
+a=()
+print(type(a))
 b = []
 print(type(b))
 c= {}
