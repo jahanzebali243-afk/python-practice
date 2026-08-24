@@ -43,5 +43,4 @@ def result ():
     elif outcome_a == "MATCH DARW !!":
         return match_draw+1
 result()
-
 game_2()
