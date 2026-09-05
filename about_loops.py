@@ -35,13 +35,13 @@ for i in range("rows"):
     for j in range("col"):
          pass
 
-#6. While with Counter (condition + manual update)
+#6. Whgile with Counter (condition + manual update)
 i = 10
 while i>8:
     i % 2 == 0
     print (i)
     i = i + 1    
-    pass
+    
 
 #7. Reverse/Step Loop
 for i in range(9, 90, 10):
