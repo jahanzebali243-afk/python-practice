@@ -44,5 +44,5 @@ while i>8:
     
 
 #7. Reverse/Step Loop
-for i in range(9, 90, 10):
+for i in range(5, 50, 10):
     print (i)
