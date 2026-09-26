@@ -15,4 +15,31 @@ elif gender in ["f" , "female"] :
 else:
     print ("404 Error")
 
-#print (f"===your gender is {gender}===\n===your age is {age}===\n===your weight is {weight}lbs===\n===your height is {height}cm===")
+# --- Activity Level ---
+print("\nSelect your activity level:")
+print("1. Sedentary (no exercise)")
+print("2. Light exercise (1-3 days/week)")
+print("3. Moderate exercise (3-5 days/week)")
+print("4. Heavy exercise (6-7 days/week)")
+print("5. Athlete (2x per day)")
+
+activity = input("Enter choice (1-5): ").strip()
+
+activity_factors = {
+    "1": 1.2,
+    "2": 1.375,
+    "3": 1.55,
+    "4": 1.725,
+    "5": 1.9
+}
+
+if activity in activity_factors:
+    factor = activity_factors[activity]
+    if gender in ["m", "male"]:
+        tdee = bmr_male * factor
+    else:
+        tdee = bmr_female * factor
+    print(f"\nYour daily calorie needs (TDEE): {tdee:.0f} calories")
+else:
+    print("Invalid activity choice.")
+    tdee = 0
