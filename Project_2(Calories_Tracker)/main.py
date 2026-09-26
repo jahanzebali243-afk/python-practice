@@ -1,3 +1,4 @@
+import datetime
 print ("=== Calories Tracker ===")
 print ("Enter how much Calories u eat and how much calories have left we can track your calories perfectly")
 
@@ -82,3 +83,20 @@ elif remaining == 0:
     print("You hit your target exactly! ")
 else:
     print(f"Over by:         {abs(remaining):.0f} cal")
+
+# --- Save to file ---
+today = datetime.date.today()
+
+with open("calories_history.txt", "a") as f:
+    f.write(f"\n===== {today} =====\n")
+    f.write(f"Gender: {gender}\n")
+    f.write(f"Age: {age} | Weight: {weight}kg | Height: {height}cm\n")
+    f.write(f"BMR: {bmr_male if gender in ['m','male'] else bmr_female:.0f} cal\n")
+    f.write(f"TDEE (daily target): {tdee:.0f} cal\n")
+    f.write("Foods eaten:\n")
+    for name, cals in food_log:
+        f.write(f"  - {name}: {cals} cal\n")
+    f.write(f"Total eaten: {total_eaten:.0f} cal\n")
+    f.write(f"Remaining: {remaining:.0f} cal\n")
+
+print("\n History saved to 'calories_history.txt'")

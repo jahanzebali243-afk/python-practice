@@ -1,0 +1,26 @@
+
+===== 2026-09-26 =====
+Gender: m
+Age: 21 | Weight: 74.6kg | Height: 177.0cm
+BMR: 1752 cal
+TDEE (daily target): 2716 cal
+Foods eaten:
+  - roti + dall + pakore: 850.0 cal
+  - tea + biscuits: 500.0 cal
+  - roti + chicken: 700.0 cal
+Total eaten: 2050 cal
+Remaining: 666 cal
+
+===== 2026-09-26 =====
+Gender: f
+Age: 33 | Weight: 85.0kg | Height: 165.0cm
+BMR: 1555 cal
+TDEE (daily target): 2138 cal
+Foods eaten:
+  - 2 roti + sabzi: 700.0 cal
+  - custer: 500.0 cal
+  - tea + biscuits: 600.0 cal
+  - burger: 599.0 cal
+  - rice + daal: 800.0 cal
+Total eaten: 3199 cal
+Remaining: -1061 cal
