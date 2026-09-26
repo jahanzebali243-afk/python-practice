@@ -43,3 +43,42 @@ if activity in activity_factors:
 else:
     print("Invalid activity choice.")
     tdee = 0
+
+    # --- Food Logging ---
+print("\n=== Log Your Food ===")
+print("Type food name and calories. Type 'done' when finished.\n")
+
+total_eaten = 0
+food_log = []   # stores (name, calories) pairs
+
+while True:
+    food = input("Food name :- ").strip()
+    if food.lower() == "done":
+        break
+    try:
+        cals = float(input(f"Calories in {food}: "))
+        if cals < 0:
+            print("Calories can't be negative. Try again.")
+            continue
+        total_eaten += cals
+        food_log.append((food, cals))
+        print(f" Added {food} ({cals} cal). Total so far: {total_eaten} cal\n")
+    except ValueError:
+        print("Invalid calories. Please enter a number.\n")
+
+# --- Summary ---
+print("\n=== Today's Summary ===")
+print(f"Foods eaten-:")
+for name, cals in food_log:
+    print(f"  - {name}: {cals} cal")
+
+print(f"\nTotal eaten:     {total_eaten:.0f} cal")
+print(f"Daily target:    {tdee:.0f} cal")
+
+remaining = tdee - total_eaten
+if remaining > 0:
+    print(f"Remaining:       {remaining:.0f} cal ")
+elif remaining == 0:
+    print("You hit your target exactly! ")
+else:
+    print(f"Over by:         {abs(remaining):.0f} cal")
