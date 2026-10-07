@@ -1,0 +1,11 @@
+venv = "isolated workspace"
+pip = "installer for that workspace"
+Together = clean, professional Python setup per project
+
+Project A folder/
+   venv/        ← its own numpy 1.20
+   main.py
+
+Project B folder/
+   venv/        ← its own numpy 2.0
+   main.py
